@@ -1,0 +1,173 @@
+{
+	"type": "Collection",
+	"properties": {
+		"firstName": {
+			"name": "firstName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "firstName",
+			"order": 0
+		},
+		"lastName": {
+			"name": "lastName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "lastName",
+			"order": 1
+		},
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "email",
+			"order": 2
+		},
+		"guardian": {
+			"name": "guardian",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "guardian",
+			"order": 3
+		},
+		"dateOfBirth": {
+			"name": "dateOfBirth",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "dateOfBirth",
+			"order": 4
+		},
+		"position1": {
+			"name": "position1",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "position1",
+			"order": 5
+		},
+		"position2": {
+			"name": "position2",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "position2",
+			"order": 6
+		},
+		"membership": {
+			"name": "membership",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "membership",
+			"order": 7
+		},
+		"merch": {
+			"name": "merch",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "merch",
+			"order": 8
+		},
+		"ccFirstName": {
+			"name": "ccFirstName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "ccFirstName",
+			"order": 9
+		},
+		"ccLastName": {
+			"name": "ccLastName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "ccLastName",
+			"order": 10
+		},
+		"ccNumber": {
+			"name": "ccNumber",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "ccNumber",
+			"order": 11
+		},
+		"cvv": {
+			"name": "cvv",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "cvv",
+			"order": 12
+		},
+		"expMonth": {
+			"name": "expMonth",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "expMonth",
+			"order": 13
+		},
+		"expYear": {
+			"name": "expYear",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "expYear",
+			"order": 14
+		},
+		"address": {
+			"name": "address",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "address",
+			"order": 15
+		},
+		"aptNumber": {
+			"name": "aptNumber",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "aptNumber",
+			"order": 16
+		},
+		"city": {
+			"name": "city",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "city",
+			"order": 17
+		},
+		"state": {
+			"name": "state",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "state",
+			"order": 18
+		},
+		"zip": {
+			"name": "zip",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "zip",
+			"order": 19
+		},
+		"tosAccept": {
+			"name": "tosAccept",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": true,
+			"id": "tosAccept",
+			"order": 20
+		}
+	}
+}

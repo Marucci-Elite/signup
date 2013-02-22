@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Marucci Payment Gateway</title>
+<!--<link rel="stylesheet" href="./stylesheets/examples.css" type="text/css"> -->
+<!--<link rel="stylesheet" href="./stylesheets/recurly.css" type="text/css"> -->
+<link rel="stylesheet" href="./stylesheets/cart.css" type="text/css">
+
+</head>
+  <body style="zoom: 1;">
+	<center>
+	<img src="./stylesheets/images/BUSAPBMLogo_FINAL.jpeg" alt="Baseball USA - powered by Marucci" height="199" width="320">
+    <h1>Practice Team Signup Form</h1>
+<div id="recurly-subscribe">
+    <form class="recurly subscribe">
+        <!--[if lt IE 7]><div class="iefail"><div class="chromeframe"><p class="blast">Your browser is not supported by Recurly.js.</p><p><a href="http://browsehappy.com/">Upgrade to a different browser</a></p><p>or</p><p><a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a></p><p>to use this site.</p></div></div><![endif]-->
+<!--        <table border="1" width="75%">
+		<tr>
+		<td> -->
+			<h3><u>Team Info</u></h3>
+			<b>Team Name:</b> Houston Heat - 13U  <br><br>
+			<b>Practice:</b> Mon/Wed Night <br><br> <!-- from 5:45pm to 8:00pm-->
+			<b>Term:</b> February - July, 2013 (6 mos)<br>
+			 (subject to World Series tournaments in July)<br><br>
+			<b>Cage:</b> #2 - 5:45pm to 6:45pm <br><br>
+			<b>Field:</b> #1 - 7:00pm to 8:00pm <br>
+<!--		</td>
+		<td> -->
+		<div class="contact_info">
+            <div class="title">
+                <h3><u>Player Info</u></h3>
+            </div>
+            <div class="full_name">
+                <div class="field first_name">
+                    <div class="placeholder" style="display: none;">
+                        First Name
+                    </div><input type="text" placeholder="First Name" name="firstName">
+                </div>
+                <div class="field last_name">
+                    <div class="placeholder" style="display: none;">
+                        Last Name
+                    </div><input type="text" placeholder="Last Name" name="lastName">
+                </div>
+            </div>
+            <div class="field email">
+                <div class="placeholder" style="display: none;">
+                    Email
+                </div><input type="text" placeholder="Email" name="email">
+            </div>
+            <div class="field parent">
+                <div class="placeholder" style="display: none;">
+                    Parent/Legal Guardian
+                </div><input type="text" placeholder="Parent/Legal Guardian" name="guardian">
+            </div>
+            <div class="field dob">
+                <div class="placeholder" style="display: none;">
+                    Date of Birth
+                </div><input type="text" placeholder="Date of Birth" name="dateOfBirth">
+            </div>
+            <div class="positions">
+				<div class="title">
+            	Positions
+				</div>
+            	<div class="primary_pos">
+                <select name="position1">
+                    <option value="C">
+                        C
+                    </option>
+                    <option value="1B">
+                        1B
+                    </option>
+                    <option value="2B">
+                        2B
+                    </option>
+                    <option value="3B">
+                        3B
+                    </option>
+                    <option value="SS">
+                        SS
+                    </option>
+                    <option value="OF" selected>
+                        OF
+                    </option>
+                    <option value="SP">
+                        SP
+                    </option>
+                    <option value="P">
+                        P
+                    </option>
+                </select>
+                </div>
+				<div class="secondary_pos">
+				<select name="position2">
+				    <option value="C">
+				        C
+				    </option>
+				    <option value="1B">
+				        1B
+				    </option>
+				    <option value="2B">
+				        2B
+				    </option>
+				    <option value="3B">
+				        3B
+				    </option>
+				    <option value="SS">
+				        SS
+				    </option>
+				    <option value="OF" selected>
+				        OF
+				    </option>
+				    <option value="SP">
+				        SP
+				    </option>
+				    <option value="P">
+				        P
+				    </option>
+				</select>
+				</div>
+			</div>
+        </div>
+<!--		</td>
+		</tr>
+		<tr colspan=2>
+		<td>
+			Detail
+		</td>
+		</tr>
+		<tr>
+		<td></td>
+		<td> -->
+        <div class="items">
+            <div class="title">
+                <h3><u>Items Purchased</u></h3>
+            </div>
+            <div class="item1">
+	            <div class="itemNm">
+					<u>Team Practice Package</u>
+	            </div>
+	            <div class="itemDesc">
+					Spring Cage/Field Practice Package (10% discount for 46 practices - Feb-July)
+	            </div>
+	            <div class="itemAmount">
+					69.00
+	            </div>
+            </div>
+			<br>
+            <div class="item2">
+				<u>Facility Membership Options</u>
+                <select name="membership">
+                    <option name="nomember" value=0>
+                        No membership right now, thanks!
+                    </option>
+                    <option name="individual" value=100>
+                        Individual Membership $100/mo
+                    </option>
+                    <option name="family" value=180>
+                        Family Membership $180/mo
+                    </option>
+                    <option name="team" value=80 selected>
+                        Team Membership $80/mo (min of 8 players on your team)
+                    </option>
+                    <option name="lesson" value=260>
+                        Lesson Membership $260/mo (includes 4 guaranteed lessons/mo)
+                    </option>
+                </select>
+           	</div>
+			<br>
+            <div class="item3">
+				<u>Marucci Merch Option</u>
+                <select name="merch">
+                    <option name="nomerch" value=0>
+                        No merch option now, thanks!
+                    </option>
+                    <option name="merch" value=66.67 selected>
+                        $600 worth of product for $400 (paid monthly over your Practice Term)
+                    </option>
+                </select>
+            </div>
+			<br>
+			<u>Total</u>
+            <div class="Total">
+				215.67
+            </div>
+		</div>
+        <div class="billing_info">
+            <div class="title">
+                <h3><u>Payment Info</u></h3>
+            </div>
+            <div class="accepted_cards">
+                <div class="card mastercard">
+                    MasterCard
+                </div>
+                <div class="card discover">
+                    Discover
+                </div>
+                <div class="card american_express">
+                    American Express
+                </div>
+                <div class="card visa">
+                    Visa
+                </div>
+            </div>
+            <div class="credit_card">
+                <div class="field first_name">
+                    <div class="placeholder" style="display: none;">
+                        First Name
+                    </div><input type="text" placeholder="First Name" name="ccFirstName">
+                </div>
+                <div class="field last_name">
+                    <div class="placeholder" style="display: none;">
+                        Last Name
+                    </div><input type="text" placeholder="Last Name" name="ccLastName">
+                </div>
+                <div class="card_cvv">
+                    <div class="field card_number">
+                        <div class="placeholder" style="display: none;">
+                            Credit Card Number
+                        </div><input type="text" placeholder="Credit Card Number" name="ccNumber">
+                    </div>
+                    <div class="field cvv">
+                        <div class="placeholder" style="display: none;">
+                            CVV
+                        </div><input type="text" placeholder="CVV" name="cvv">
+                    </div>
+                </div>
+                <div class="field expires">
+                    <div class="title">
+                        Expires
+                    </div>
+                    <div class="month">
+                        <select name="expMonth">
+                            <option value="1">
+                                01 - January
+                            </option>
+                            <option value="2">
+                                02 - February
+                            </option>
+                            <option value="3">
+                                03 - March
+                            </option>
+                            <option value="4">
+                                04 - April
+                            </option>
+                            <option value="5">
+                                05 - May
+                            </option>
+                            <option value="6">
+                                06 - June
+                            </option>
+                            <option value="7">
+                                07 - July
+                            </option>
+                            <option value="8">
+                                08 - August
+                            </option>
+                            <option value="9">
+                                09 - September
+                            </option>
+                            <option value="10">
+                                10 - October
+                            </option>
+                            <option value="11">
+                                11 - November
+                            </option>
+                            <option value="12">
+                                12 - December
+                            </option>
+                        </select>
+                    </div>
+                    <div class="year">
+                        <select name="expYear">
+                            <option name="2013">
+                                2013
+                            </option>
+                            <option name="2014">
+                                2014
+                            </option>
+                            <option name="2015">
+                                2015
+                            </option>
+                            <option name="2016">
+                                2016
+                            </option>
+                            <option name="2017">
+                                2017
+                            </option>
+                            <option name="2018">
+                                2018
+                            </option>
+                            <option name="2019">
+                                2019
+                            </option>
+                            <option name="2020">
+                                2020
+                            </option>
+                            <option name="2021">
+                                2021
+                            </option>
+                            <option name="2022">
+                                2022
+                            </option>
+                            <option name="2023">
+                                2023
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="address full">
+                <div class="field address1">
+                    <div class="placeholder" style="display: none;">
+                        Address
+                    </div><input type="text" placeholder="Address" name="address">
+                </div>
+                <div class="field address2">
+                    <div class="placeholder" style="display: none;">
+                        Apt/Suite
+                    </div><input type="text" placeholder="Apt/Suite" name="aptNumber">
+                </div>
+                <div class="field city">
+                    <div class="placeholder" style="display: none;">
+                        City
+                    </div><input type="text" placeholder="City" name="city">
+                </div>
+                <div class="state_zip">
+                    <div class="field state select_mode">
+                        <select name="state">
+                            <option value="-">
+                                Select State
+                            </option>
+                            <option value="--">
+                                ------------
+                            </option>
+                            <option value="AK">
+                                Alaska
+                            </option>
+                            <option value="AL">
+                                Alabama
+                            </option>
+                            <option value="AP">
+                                Armed Forces Pacific
+                            </option>
+                            <option value="AR">
+                                Arkansas
+                            </option>
+                            <option value="AS">
+                                American Samoa
+                            </option>
+                            <option value="AZ">
+                                Arizona
+                            </option>
+                            <option value="CA">
+                                California
+                            </option>
+                            <option value="CO">
+                                Colorado
+                            </option>
+                            <option value="CT">
+                                Connecticut
+                            </option>
+                            <option value="DC">
+                                District of Columbia
+                            </option>
+                            <option value="DE">
+                                Delaware
+                            </option>
+                            <option value="FL">
+                                Florida
+                            </option>
+                            <option value="FM">
+                                Federated States of Micronesia
+                            </option>
+                            <option value="GA">
+                                Georgia
+                            </option>
+                            <option value="GU">
+                                Guam
+                            </option>
+                            <option value="HI">
+                                Hawaii
+                            </option>
+                            <option value="IA">
+                                Iowa
+                            </option>
+                            <option value="ID">
+                                Idaho
+                            </option>
+                            <option value="IL">
+                                Illinois
+                            </option>
+                            <option value="IN">
+                                Indiana
+                            </option>
+                            <option value="KS">
+                                Kansas
+                            </option>
+                            <option value="KY">
+                                Kentucky
+                            </option>
+                            <option value="LA">
+                                Louisiana
+                            </option>
+                            <option value="MA">
+                                Massachusetts
+                            </option>
+                            <option value="MD">
+                                Maryland
+                            </option>
+                            <option value="ME">
+                                Maine
+                            </option>
+                            <option value="MH">
+                                Marshall Islands
+                            </option>
+                            <option value="MI">
+                                Michigan
+                            </option>
+                            <option value="MN">
+                                Minnesota
+                            </option>
+                            <option value="MO">
+                                Missouri
+                            </option>
+                            <option value="MP">
+                                Northern Mariana Islands
+                            </option>
+                            <option value="MS">
+                                Mississippi
+                            </option>
+                            <option value="MT">
+                                Montana
+                            </option>
+                            <option value="NC">
+                                North Carolina
+                            </option>
+                            <option value="ND">
+                                North Dakota
+                            </option>
+                            <option value="NE">
+                                Nebraska
+                            </option>
+                            <option value="NH">
+                                New Hampshire
+                            </option>
+                            <option value="NJ">
+                                New Jersey
+                            </option>
+                            <option value="NM">
+                                New Mexico
+                            </option>
+                            <option value="NV">
+                                Nevada
+                            </option>
+                            <option value="NY">
+                                New York
+                            </option>
+                            <option value="OH">
+                                Ohio
+                            </option>
+                            <option value="OK">
+                                Oklahoma
+                            </option>
+                            <option value="OR">
+                                Oregon
+                            </option>
+                            <option value="PA">
+                                Pennsylvania
+                            </option>
+                            <option value="PR">
+                                Puerto Rico
+                            </option>
+                            <option value="PW">
+                                Palau
+                            </option>
+                            <option value="RI">
+                                Rhode Island
+                            </option>
+                            <option value="SC">
+                                South Carolina
+                            </option>
+                            <option value="SD">
+                                South Dakota
+                            </option>
+                            <option value="TN">
+                                Tennessee
+                            </option>
+                            <option value="TX">
+                                Texas
+                            </option>
+                            <option value="UT">
+                                Utah
+                            </option>
+                            <option value="VA">
+                                Virginia
+                            </option>
+                            <option value="VI">
+                                Virgin Islands
+                            </option>
+                            <option value="VT">
+                                Vermont
+                            </option>
+                            <option value="WA">
+                                Washington
+                            </option>
+                            <option value="WV">
+                                West Virginia
+                            </option>
+                            <option value="WI">
+                                Wisconsin
+                            </option>
+                            <option value="WY">
+                                Wyoming
+                            </option>
+                        </select>
+                    </div>
+                    <div class="field zip">
+                        <div class="placeholder" style="display: none;">
+                            Zip/Postal
+                        </div><input type="text" placeholder="Zip/Postal" name="zip">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accept_tos">
+            <input id="tos_check" type="checkbox" name="tosAccept"><label id="accept_tos" for="tos_check">I accept the <a target="_blank" class="tos_link" href="http://example.com/tos">Terms of Service</a></label>
+        </div>
+
+        <div class="footer">
+            <button type="submit" class="submit">Authorize Payment</button>
+        </div>
+<!--	</td>
+	</tr> -->
+</form>
+</div>
+</center>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript" src="/dpd.js"></script>
+ <script type="text/javascript">
+
+   $('form').submit(function() {
+
+       var obj = {};
+
+       var error = '';
+
+       $(this).serializeArray().forEach(function(field){
+
+         var hasInput = ('string' === typeof field.value) ? $.trim(field.value).length : field.value;
+
+         if (!hasInput && field.name !== 'guardian'){ error = error + 'Missing '+ field.name + '\n'; }
+
+         obj[field.name] = field.value;
+
+       });
+
+       if (error.length) { return alert('Please Fix the following errors\n\n' + error); }
+        obj.tosAccept = (obj.tosAccept === 'on');
+
+
+        dpd.users.post(obj, function(result, err) {
+          console.log(obj)
+
+          console.log(result, err);
+
+        });
+
+     return false;
+
+   });
+
+ </script>
+
+</body></html>
