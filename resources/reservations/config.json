@@ -1,0 +1,45 @@
+{
+	"type": "Collection",
+	"properties": {
+		"cage": {
+			"name": "cage",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "cage",
+			"order": 0
+		},
+		"field": {
+			"name": "field",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "field",
+			"order": 1
+		},
+		"term": {
+			"name": "term",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "term",
+			"order": 2
+		},
+		"practice": {
+			"name": "practice",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "practice",
+			"order": 3
+		},
+		"teamName": {
+			"name": "teamName",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "teamName",
+			"order": 4
+		}
+	}
+}

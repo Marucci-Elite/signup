@@ -8,23 +8,23 @@
 <link rel="stylesheet" href="./stylesheets/cart.css" type="text/css">
 
 </head>
+
   <body style="zoom: 1;">
 	<center>
 	<img src="./stylesheets/images/BUSAPBMLogo_FINAL.jpeg" alt="Baseball USA - powered by Marucci" height="199" width="320">
     <h1>Practice Team Signup Form</h1>
-<div id="recurly-subscribe">
-    <form class="recurly subscribe">
+<div id="payment" name="payment">
+    <form class="payment">
         <!--[if lt IE 7]><div class="iefail"><div class="chromeframe"><p class="blast">Your browser is not supported by Recurly.js.</p><p><a href="http://browsehappy.com/">Upgrade to a different browser</a></p><p>or</p><p><a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a></p><p>to use this site.</p></div></div><![endif]-->
 <!--        <table border="1" width="75%">
 		<tr>
 		<td> -->
 			<h3><u>Team Info</u></h3>
-			<b>Team Name:</b> Houston Heat - 13U  <br><br>
-			<b>Practice:</b> Mon/Wed Night <br><br> <!-- from 5:45pm to 8:00pm-->
-			<b>Term:</b> February - July, 2013 (6 mos)<br>
-			 (subject to World Series tournaments in July)<br><br>
-			<b>Cage:</b> #2 - 5:45pm to 6:45pm <br><br>
-			<b>Field:</b> #1 - 7:00pm to 8:00pm <br>
+			<b>Team Name:</b> <span id="teamName"></span><br><br>
+			<b>Practice:</b> <span id="practice"></span><br><br> <!-- from 5:45pm to 8:00pm-->
+			<b>Term:</b> <span id="term"></span><br>(subject to World Series tournaments in July)<br><br>
+			<b>Cage:</b> #<span id="cage"></span><br><br>
+			<b>Field:</b> #<span id="field"></span><br>
 <!--		</td>
 		<td> -->
 		<div class="contact_info">
@@ -148,7 +148,7 @@
 			<br>
             <div class="item2">
 				<u>Facility Membership Options</u>
-                <select name="membership">
+                <select id="membership" name="membership">
                     <option name="nomember" value=0>
                         No membership right now, thanks!
                     </option>
@@ -169,7 +169,7 @@
 			<br>
             <div class="item3">
 				<u>Marucci Merch Option</u>
-                <select name="merch">
+                <select id="merch" name="merch">
                     <option name="nomerch" value=0>
                         No merch option now, thanks!
                     </option>
@@ -178,10 +178,11 @@
                     </option>
                 </select>
             </div>
-			<br>
+
+
+    			<br>
 			<u>Total</u>
-            <div class="Total">
-				215.67
+            <div id="total" name="total">
             </div>
 		</div>
         <div class="billing_info">
@@ -227,85 +228,15 @@
                 </div>
                 <div class="field expires">
                     <div class="title">
-                        Expires
+                        Expiration Date
                     </div>
-                    <div class="month">
-                        <select name="expMonth">
-                            <option value="1">
-                                01 - January
-                            </option>
-                            <option value="2">
-                                02 - February
-                            </option>
-                            <option value="3">
-                                03 - March
-                            </option>
-                            <option value="4">
-                                04 - April
-                            </option>
-                            <option value="5">
-                                05 - May
-                            </option>
-                            <option value="6">
-                                06 - June
-                            </option>
-                            <option value="7">
-                                07 - July
-                            </option>
-                            <option value="8">
-                                08 - August
-                            </option>
-                            <option value="9">
-                                09 - September
-                            </option>
-                            <option value="10">
-                                10 - October
-                            </option>
-                            <option value="11">
-                                11 - November
-                            </option>
-                            <option value="12">
-                                12 - December
-                            </option>
+                        <div>
+                        <select id="expMonth" name="expMonth">
                         </select>
-                    </div>
-                    <div class="year">
-                        <select name="expYear">
-                            <option name="2013">
-                                2013
-                            </option>
-                            <option name="2014">
-                                2014
-                            </option>
-                            <option name="2015">
-                                2015
-                            </option>
-                            <option name="2016">
-                                2016
-                            </option>
-                            <option name="2017">
-                                2017
-                            </option>
-                            <option name="2018">
-                                2018
-                            </option>
-                            <option name="2019">
-                                2019
-                            </option>
-                            <option name="2020">
-                                2020
-                            </option>
-                            <option name="2021">
-                                2021
-                            </option>
-                            <option name="2022">
-                                2022
-                            </option>
-                            <option name="2023">
-                                2023
-                            </option>
+
+                        <select id="expYear" name="expYear">
                         </select>
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="address full">
@@ -537,39 +468,6 @@
 </center>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <script type="text/javascript" src="/dpd.js"></script>
- <script type="text/javascript">
-
-   $('form').submit(function() {
-
-       var obj = {};
-
-       var error = '';
-
-       $(this).serializeArray().forEach(function(field){
-
-         var hasInput = ('string' === typeof field.value) ? $.trim(field.value).length : field.value;
-
-         if (!hasInput && field.name !== 'guardian'){ error = error + 'Missing '+ field.name + '\n'; }
-
-         obj[field.name] = field.value;
-
-       });
-
-       if (error.length) { return alert('Please Fix the following errors\n\n' + error); }
-        obj.tosAccept = (obj.tosAccept === 'on');
-
-
-        dpd.users.post(obj, function(result, err) {
-          console.log(obj)
-
-          console.log(result, err);
-
-        });
-
-     return false;
-
-   });
-
- </script>
+ <script type="text/javascript" src="/javascripts/app.js"></script>
 
 </body></html>

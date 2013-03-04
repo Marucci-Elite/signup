@@ -131,8 +131,8 @@
 		},
 		"aptNumber": {
 			"name": "aptNumber",
-			"type": "string",
-			"typeLabel": "string",
+			"type": "number",
+			"typeLabel": "number",
 			"required": false,
 			"id": "aptNumber",
 			"order": 16
@@ -168,6 +168,14 @@
 			"required": true,
 			"id": "tosAccept",
 			"order": 20
+		},
+		"amount": {
+			"name": "amount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "amount",
+			"order": 21
 		}
 	}
 }
