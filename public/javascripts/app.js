@@ -97,7 +97,7 @@ $('form').submit(function() {
 
   dpd.users.post(obj, function(result, err) {
     if (err) return console.log(err);
-    $('#bigForm').innerHTML('<h1>SUCCESS</h1>');
+    $('#bigForm').html('<h1>SUCCESS</h1>');
     return false;
   });
 
