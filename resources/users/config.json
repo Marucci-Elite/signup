@@ -176,6 +176,14 @@
 			"required": true,
 			"id": "amount",
 			"order": 21
+		},
+		"resId": {
+			"name": "resId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "resId",
+			"order": 22
 		}
 	}
 }

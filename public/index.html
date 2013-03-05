@@ -9,12 +9,19 @@
 
 </head>
 
-  <body style="zoom: 1;">
+  <body style="zoom: 1; font-family: verdana">
 	<center>
 	<img src="./stylesheets/images/BUSAPBMLogo_FINAL.jpeg" alt="Baseball USA - powered by Marucci" height="199" width="320">
+    <br>
+    <br>
+    <div id="loading">Loading...</div>
+    <div id="errMsg" style="display:none; font-size:24px">Missing required Invitation ID!<br>Try Invitation email link again!</div>
+    <div id="bigForm" style="display:none">
+
+
     <h1>Practice Team Signup Form</h1>
 <div id="payment" name="payment">
-    <form class="payment">
+    <form class="payment" action="javascript:void(0);">
         <!--[if lt IE 7]><div class="iefail"><div class="chromeframe"><p class="blast">Your browser is not supported by Recurly.js.</p><p><a href="http://browsehappy.com/">Upgrade to a different browser</a></p><p>or</p><p><a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a></p><p>to use this site.</p></div></div><![endif]-->
 <!--        <table border="1" width="75%">
 		<tr>
@@ -464,6 +471,7 @@
 <!--	</td>
 	</tr> -->
 </form>
+</div>
 </div>
 </center>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

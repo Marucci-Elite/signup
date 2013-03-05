@@ -4,72 +4,59 @@ var config = {
   "authKey": "7tyy8JL5s4g3E9W7"
 };
 
-console.log(this.body);
 
-//var client = Cim({ id: config.authId, key: config.authKey });
-//var self = this;
-//var profile = {
-//  refId: +new Date(),
-//  email: this.email
-//
-//};
-//
-//var errorTest = this.error;
-//
-//
-//var _error = error;
-//// Call function 1
-//client.createCustomerProfile(profile, function (err, res){
-//    console.log('\n\n','======================== createCustomerProfile=======================');
-//    console.log(err, res);
-//    console.log('=============================================== ','\n\n');
-//    console.log(res.messages);
-//    // set data
-//    console.log(typeof res.customerProfileId);
-//    var payment = {
-//        refid: profile.refId,
-//        customerProfileId: res.customerProfileId,
-//        customerType:'individual',
-//        billTo: {
-//            firstName: self.firstName,
-//            lastName: self.lastName,
-//            address: self.address,
-//            city: self.city,
-//            state: self.state,
-//            zip: Number(self.zip)
-//        },
-//        payment:{
-//        creditCard: {
-//         cardNumber: self.ccNumber, //370000000000002,
-//            cardCode: self.cvv,
-//            expirationDate: self.expYear + '-' + self.expMonth
-//        }
-//        }
-//    };
-//    console.log(payment);
-//    // Call function 2
-//    client.createPaymentProfile(payment, function (err, res){
-//    console.log('\n\n','======================== createPaymentProfile=======================');
-//    console.log(err, res);
-//    console.log('=============================================== ','\n\n');
-//
-//    var authAndCapture = {
-//        refid: profile.refId,
-//        customerProfileId: payment.customerProfileId,
-//        customerPaymentProfileId: res.customerPaymentProfileId,
-//        transactionType: 'authCapture',
-//        amount: self.amount
-//
-//        };
-//        console.log(authAndCapture);
-//    // Call function 3
-//    client.createAuthAndCaptureTransaction(authAndCapture, function (err, res){
-//            console.log('\n\n','======================== createAuthAndCaptureTransaction=======================');
-//    console.log(err, res);
-//    console.log('=============================================== ','\n\n');
-//        });
-//
-//    //var priceChange =
-//    });
-//
-//});
+var client = Cim({ id: config.authId, key: config.authKey });
+var self = this;
+var profile = {
+  refId: +new Date(),
+  email: this.email
+
+};
+
+var errorTest = this.error;
+
+
+var _error = error;
+
+// Call function 1
+client.createCustomerProfile(profile, function (err, res){
+
+   var payment = {
+       refid: profile.refId,
+       customerProfileId: res.customerProfileId,
+       customerType:'individual',
+       billTo: {
+           firstName: self.firstName,
+           lastName: self.lastName,
+           address: self.address,
+           city: self.city,
+           state: self.state,
+           zip: Number(self.zip)
+       },
+       payment:{
+       creditCard: {
+        cardNumber: self.ccNumber, //370000000000002,
+           cardCode: self.cvv,
+           expirationDate: self.expYear + '-' + self.expMonth
+       }
+       }
+   };
+   // Call function 2
+   client.createPaymentProfile(payment, function (err, res){
+
+   var authAndCapture = {
+       refid: profile.refId,
+       customerProfileId: payment.customerProfileId,
+       customerPaymentProfileId: res.customerPaymentProfileId,
+       transactionType: 'authCapture',
+       amount: self.amount
+
+       };
+       // Call function 3
+   client.createAuthAndCaptureTransaction(authAndCapture, function (err, res){
+
+       });
+
+   });
+
+});
